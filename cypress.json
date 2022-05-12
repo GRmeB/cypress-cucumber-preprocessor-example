@@ -1,0 +1,31 @@
+{
+	"projectId": "testproject",
+	"defaultCommandTimeout": 10000,
+	"retries": {
+		"runMode": 0,
+		"openMode": 0
+	},
+	"env": {
+		"allure": false,
+		"allureResultsPath": "cypress/reports/allure/json",
+		"allureLogCypress": true,
+		"allureAttachRequests": false,
+		"allureOmitPreviousAttemptScreenshots": false,
+		"allureClearSkippedTests": false,
+		"allureAddAnalyticLabels": false,
+		"allureAddVideoOnPass": false
+	},
+	"testFiles": ["**/*.feature"],
+	"video": false,
+	"screenshotOnRunFailure": true,
+	"watchForFileChanges": false,
+	"experimentalStudio": true,
+	"reporter": "cypress-multi-reporters",
+	"reporterOptions": {
+		"reporterEnabled": "mocha-junit-reporter",
+		"mochaJunitReporterReporterOptions": {
+			"mochaFile": "cypress/reports/junit/junit-report.xml",
+			"overwrite": false
+		}
+	}
+}
